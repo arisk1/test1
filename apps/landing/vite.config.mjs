@@ -1,9 +1,6 @@
-/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => ({
-  root: import.meta.dirname,
-  cacheDir: '../../node_modules/.vite/landing',
+export default defineConfig({
   server: {
     port: 4200,
     host: 'localhost',
@@ -12,17 +9,12 @@ export default defineConfig(() => ({
     port: 4300,
     host: 'localhost',
   },
-  plugins: [],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [],
-  // },
   build: {
-    outDir: './dist',
+    outDir: '../../dist/apps/landing',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
   },
-}));
+});
