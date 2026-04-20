@@ -1,0 +1,10 @@
+html {
+  background: linear-gradient(180deg, #f8f4ea 0%, #e5efe9 100%);
+  color: #112433;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+  margin: 0;
+}

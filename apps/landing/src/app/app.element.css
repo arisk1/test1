@@ -1,0 +1,213 @@
+:host {
+  color: #112433;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(248, 208, 140, 0.9), transparent 28%),
+    linear-gradient(135deg, #f4eee3 0%, #dce9e4 52%, #bfd5df 100%);
+  border: 1px solid rgba(17, 36, 51, 0.08);
+  border-radius: 32px;
+  box-shadow: 0 28px 80px rgba(17, 36, 51, 0.12);
+  overflow: hidden;
+  padding: 28px;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.brand,
+.top-link {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(17, 36, 51, 0.08);
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+.brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.top-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-layout {
+  align-items: center;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.92;
+  margin: 0;
+  max-width: 10ch;
+}
+
+.lede {
+  font-size: 1.04rem;
+  line-height: 1.8;
+  margin: 26px 0 0;
+  max-width: 56ch;
+}
+
+.carousel {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 28px;
+  padding: 18px;
+}
+
+.carousel-viewport {
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  transform: scale(1.04);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.carousel-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-slide img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-controls {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.carousel-button {
+  background: #112433;
+  border: none;
+  border-radius: 999px;
+  color: #f8f4ea;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.carousel-dot {
+  background: rgba(17, 36, 51, 0.18);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  height: 10px;
+  padding: 0;
+  transition: width 180ms ease, background-color 180ms ease;
+  width: 10px;
+}
+
+.carousel-dot.is-active {
+  background: #112433;
+  width: 34px;
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: 12ch;
+  }
+
+  .carousel-viewport {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 16px;
+  }
+
+  .hero-card {
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .topbar {
+    margin-bottom: 32px;
+  }
+
+  .brand,
+  .top-link {
+    padding: 10px 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.4rem, 15vw, 4rem);
+  }
+
+  .carousel-controls {
+    flex-wrap: wrap;
+  }
+}
