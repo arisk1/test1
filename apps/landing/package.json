@@ -1,5 +1,12 @@
 {
   "name": "@org/landing",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "8.0.9"
+  }
 }

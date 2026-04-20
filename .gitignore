@@ -63,3 +63,4 @@ apps/landing/.env
 apps/landing/.env.production
 apps/landing/.env.local
 apps/landing/.env.*.local
+.vercel

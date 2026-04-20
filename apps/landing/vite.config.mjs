@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 
+const isVercel = process.env.VERCEL === '1';
+
 export default defineConfig({
   server: {
     port: 4200,
@@ -10,7 +12,7 @@ export default defineConfig({
     host: 'localhost',
   },
   build: {
-    outDir: '../../dist/apps/landing',
+    outDir: isVercel ? 'dist' : '../../dist/apps/landing',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
