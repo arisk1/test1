@@ -5,7 +5,8 @@
   "packageManager": "pnpm@10.18.3",
   "scripts": {
     "dev": "pnpm nx serve @org/landing",
-    "build:landing": "pnpm nx build @org/landing"
+    "build:landing": "pnpm nx build @org/landing",
+    "vercel-build": "pnpm exec vite build --config apps/landing/vite.config.mjs"
   },
   "private": true,
   "devDependencies": {
