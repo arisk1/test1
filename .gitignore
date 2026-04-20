@@ -57,3 +57,9 @@ vite.config.*.timestamp*
 .opencode/
 .vscode/
 .github/
+
+# env files
+apps/landing/.env
+apps/landing/.env.production
+apps/landing/.env.local
+apps/landing/.env.*.local
