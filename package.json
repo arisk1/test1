@@ -2,7 +2,10 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "pnpm nx serve @org/landing",
+    "build:landing": "pnpm nx build @org/landing"
+  },
   "private": true,
   "devDependencies": {
     "@nx/js": "22.6.5",
@@ -20,8 +23,8 @@
     "swc-loader": "0.1.15",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2",
+    "vercel": "51.8.0",
     "vite": "8.0.9",
     "vitest": "~4.1.0"
-  },
-  "dependencies": {}
+  }
 }
