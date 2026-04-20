@@ -2,6 +2,7 @@
   "name": "@org/source",
   "version": "0.0.0",
   "license": "MIT",
+  "packageManager": "pnpm@10.18.3",
   "scripts": {
     "dev": "pnpm nx serve @org/landing",
     "build:landing": "pnpm nx build @org/landing"
